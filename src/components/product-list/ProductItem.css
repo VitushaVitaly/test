@@ -1,0 +1,19 @@
+.item {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+}
+
+.item:not(:last-child) {
+  border: 0;
+  border-bottom: 1px solid gray;
+  border-style: dashed;
+}
+
+.name {
+  width: 80%;
+}
+
+.price {
+  width: 20%;
+}

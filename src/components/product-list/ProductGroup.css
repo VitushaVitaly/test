@@ -1,0 +1,19 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  width: calc(50% - 5px);
+  box-sizing: border-box;
+}
+
+.group > .title {
+  padding: 5px;
+  background-color: lightgray;
+  border-bottom: 1px solid;
+  font-weight: 500;
+}
+
+.group > .content {
+  padding: 5px;
+}
+

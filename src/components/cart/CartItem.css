@@ -1,0 +1,19 @@
+.rate-up {
+  animation: rateUpBlinking 2s;
+}
+
+@keyframes rateUpBlinking{
+  0% { background-color: red;}
+  5% { background-color: red;}
+  100% { background-color: none;}
+}
+
+.rate-down {
+  animation: rateDownBlinking 2s;
+}
+
+@keyframes rateDownBlinking{
+  0% { background-color: green;}
+  5% { background-color: green;}
+  100% { background-color: none;}
+}

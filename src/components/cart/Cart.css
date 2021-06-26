@@ -1,0 +1,43 @@
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-spacing: inherit;
+}
+
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+tr:not(:last-child) > td {
+  border-bottom: 1px solid;
+}
+
+tr:first-child > td {
+  border-top: 1px solid;
+}
+
+.title {
+  padding: 5px;
+  background-color: lightgray;
+  border-bottom: 1px solid;
+  font-weight: 500;
+}
+
+.empty {
+  text-align: center;
+  padding: 10px;
+  color: gray;
+}
+
+.total {
+  text-align: right;
+  background-color: lightgray;
+  font-weight: 500;
+}
