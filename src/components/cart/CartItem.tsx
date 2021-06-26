@@ -21,16 +21,16 @@ function CartItem(props: CartItemProps) {
 
   const validateQuantity = (value: string): number => Math.max(1, Math.min(parseInt(value) || 1, product.quantity));
 
-  const [prevRate, setRate] = useState(rate);
+  const [currentPrice, setRate] = useState(product.price * rate);
   const [rateClass, setRateClass] = useState('');
 
   useEffect(() => {
-    setRate(rate);
+    setRate(product.price * rate);
 
-    if (rate > prevRate) {
+    if (product.price * rate > currentPrice) {
       setRateClass('rate-up');
     }
-    else if (rate < prevRate) {
+    else if (product.price * rate < currentPrice) {
       setRateClass('rate-down');
     }
     else {
@@ -52,7 +52,7 @@ function CartItem(props: CartItemProps) {
           onChange={(e) => setProductQuantity(product.id, validateQuantity(e.target.value))}
         /> шт.
       </td>
-      <td className={rateClass}>{`${(product.price * rate).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} руб. / шт.`}</td>
+      <td className={rateClass}>{`${(currentPrice).toLocaleString('ru-RU', { minimumFractionDigits: 2 })} руб. / шт.`}</td>
       <td><button onClick={() => removeProduct(product)}>Удалить</button></td>
     </tr>
   )
